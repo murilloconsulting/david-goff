@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>David Goff — Operaciones & Supply Chain</title>
+<meta name="description" content="David Edgardo Goff Sevilla · Director de Operaciones y Supply Chain con USD 195K+ en ahorros anuales acreditados en agroindustria centroamericana. 23+ años. San Pedro Sula, Honduras.">
+<meta name="author" content="David Edgardo Goff Sevilla">
+<meta name="theme-color" content="#0B0C0E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="David Goff — Operaciones & Supply Chain">
+<meta property="og:description" content="Director de Operaciones y Supply Chain · USD 195K+ en ahorros anuales acreditados · 23+ años en agroindustria centroamericana.">
+<meta property="og:locale" content="es_HN">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ---------- tokens ---------- */
+  :root {
+    --bg:           #FCFCFB;
+    --surface:      #FFFFFF;
+    --border:       #E7E5E0;
+    --border-soft:  #EFEDE8;
+    --fg:           #131417;
+    --fg-muted:     #5A5C63;
+    --fg-dim:       #8B8D95;
+    --accent:       #8A6B2E;
+    --accent-soft:  #C99A48;
+    --ink-quote:    #2A2C33;
+    --hairline:     rgba(19, 20, 23, 0.10);
+    --gutter:       clamp(20px, 5vw, 40px);
+    --measure:      820px;
+    --font-display: 'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+    --font-body:    'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --transition:   180ms cubic-bezier(.4,0,.2,1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:           #0B0C0E;
+      --surface:      #131417;
+      --border:       #22232A;
+      --border-soft:  #191A1F;
+      --fg:           #EAEAEC;
+      --fg-muted:     #8B8D95;
+      --fg-dim:       #5A5C63;
+      --accent:       #D4A24C;
+      --accent-soft:  #8A6B2E;
+      --ink-quote:    #C4C5CC;
+      --hairline:     rgba(255, 255, 255, 0.08);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:           #0B0C0E;
+    --surface:      #131417;
+    --border:       #22232A;
+    --border-soft:  #191A1F;
+    --fg:           #EAEAEC;
+    --fg-muted:     #8B8D95;
+    --fg-dim:       #5A5C63;
+    --accent:       #D4A24C;
+    --accent-soft:  #8A6B2E;
+    --ink-quote:    #C4C5CC;
+    --hairline:     rgba(255, 255, 255, 0.08);
+  }
+
+  /* ---------- reset & base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding-inline: var(--gutter);
+    padding-block: 0;
+    font-feature-settings: "ss01";
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  /* ---------- layout ---------- */
+  .wrap { max-width: var(--measure); margin-inline: auto; }
+
+  /* ---------- nav ---------- */
+  .nav {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 10;
+    background: color-mix(in oklab, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(14px);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    border-bottom: 1px solid var(--hairline);
+    margin-inline: calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+  }
+  .nav-inner {
+    max-width: var(--measure);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-block: 14px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+  }
+  .monogram {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    background: var(--fg);
+    color: var(--bg);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 13.5px;
+    color: var(--fg-muted);
+  }
+  .nav-links a { transition: color var(--transition); }
+  .nav-links a:hover { color: var(--fg); }
+  .theme-toggle {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: var(--fg-muted);
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .theme-toggle:hover { color: var(--fg); border-color: var(--fg-dim); }
+  .theme-toggle svg { width: 16px; height: 16px; }
+  .theme-toggle .sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .moon { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
+    :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+  }
+  @media (max-width: 560px) {
+    .nav-links .link-hide { display: none; }
+  }
+
+  /* ---------- eyebrow ---------- */
+  .eyebrow {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+  }
+  .eyebrow .dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: translateY(-1px);
+  }
+
+  /* ---------- hero ---------- */
+  .hero {
+    padding-block: clamp(64px, 12vw, 128px) clamp(56px, 10vw, 96px);
+  }
+  .hero .role-label {
+    display: block;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    font-weight: 300;
+    font-size: clamp(48px, 8vw, 88px);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+    margin: 0 0 32px;
+    color: var(--fg);
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .hero p.lede {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 24;
+    font-weight: 300;
+    font-size: clamp(19px, 2.2vw, 22px);
+    line-height: 1.45;
+    color: var(--fg-muted);
+    max-width: 62ch;
+    margin: 0 0 40px;
+    text-wrap: pretty;
+  }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform var(--transition), background var(--transition), border-color var(--transition), color var(--transition);
+    font-family: var(--font-body);
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary {
+    background: var(--fg);
+    color: var(--bg);
+  }
+  .btn-primary:hover { background: var(--accent); color: var(--bg); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--fg);
+    border-color: var(--border);
+  }
+  .btn-ghost:hover { border-color: var(--fg-muted); }
+  .btn svg { width: 14px; height: 14px; }
+
+  /* ---------- section rhythm ---------- */
+  section {
+    padding-block: clamp(56px, 9vw, 96px);
+    border-top: 1px solid var(--hairline);
+  }
+  section > .eyebrow { display: block; margin-bottom: 28px; }
+  h2 {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 72;
+    font-weight: 400;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0 0 20px;
+    color: var(--fg);
+    text-wrap: balance;
+  }
+
+  /* ---------- metrics (the risk: 3 huge stacked stats) ---------- */
+  .metrics { display: grid; gap: 44px; }
+  .metric {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: end;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .metric:last-child { border-bottom: none; padding-bottom: 0; }
+  .metric-number {
+    display: block;
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    font-weight: 300;
+    font-size: clamp(64px, 10.5vw, 116px);
+    line-height: 0.94;
+    letter-spacing: -0.035em;
+    color: var(--fg);
+    font-variant-numeric: tabular-nums;
+  }
+  .metric-number .prefix,
+  .metric-number .suffix {
+    font-family: var(--font-body);
+    font-variation-settings: normal;
+    font-size: 0.32em;
+    font-weight: 500;
+    color: var(--fg-dim);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    vertical-align: 0.85em;
+    display: inline-block;
+    line-height: 1;
+  }
+  .metric-number .prefix { margin-right: 10px; }
+  .metric-number .suffix { margin-left: 12px; }
+  .metric-number .plus {
+    color: var(--accent);
+    font-weight: 400;
+  }
+  .metric-caption {
+    display: block;
+    margin-top: 14px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .metric-body { padding-block: 8px; }
+  .metric-body h3 {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+  }
+  .metric-body p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--fg-muted);
+    line-height: 1.55;
+  }
+  @media (max-width: 640px) {
+    .metric { grid-template-columns: 1fr; gap: 12px; align-items: start; }
+    .metric-number { font-size: clamp(56px, 15vw, 88px); }
+  }
+
+  /* ---------- profile ---------- */
+  .profile p {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 24;
+    font-weight: 300;
+    font-size: clamp(17px, 1.8vw, 20px);
+    line-height: 1.6;
+    color: var(--ink-quote);
+    max-width: 65ch;
+    margin: 0 0 16px;
+    text-wrap: pretty;
+  }
+  .profile p:last-child { margin-bottom: 0; }
+  .profile p b {
+    font-weight: 500;
+    color: var(--fg);
+    font-style: normal;
+  }
+
+  /* ---------- achievements (story cards, but no card) ---------- */
+  .achievements { display: grid; gap: 44px; }
+  .achievement {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .achievement-number {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 72;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--accent);
+    line-height: 1;
+    padding-top: 4px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+  .achievement-number::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+    margin-bottom: 12px;
+  }
+  .achievement h3 {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 72;
+    font-weight: 500;
+    font-size: clamp(20px, 2.2vw, 24px);
+    line-height: 1.25;
+    margin: 0 0 12px;
+    color: var(--fg);
+    text-wrap: balance;
+  }
+  .achievement p {
+    margin: 0;
+    color: var(--fg-muted);
+    line-height: 1.6;
+    font-size: 15.5px;
+    max-width: 62ch;
+  }
+  .achievement .impact {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 12.5px;
+    color: var(--fg);
+    background: var(--surface);
+  }
+  .achievement .impact .k { color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+  @media (max-width: 540px) {
+    .achievement { grid-template-columns: 1fr; gap: 8px; }
+    .achievement-number::before { margin-bottom: 8px; }
+  }
+
+  /* ---------- timeline ---------- */
+  .timeline {
+    display: grid;
+    gap: 4px;
+    position: relative;
+  }
+  .role {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 32px;
+    align-items: start;
+    padding: 24px 0;
+    border-top: 1px solid var(--hairline);
+    position: relative;
+  }
+  .role:first-child { border-top: none; padding-top: 4px; }
+  .role-dates {
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    color: var(--fg-dim);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+    padding-top: 3px;
+  }
+  .role-dates .current {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 4px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .role-body h3 {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 72;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 0 4px;
+    color: var(--fg);
+    letter-spacing: -0.005em;
+  }
+  .role-body .company {
+    font-size: 14px;
+    color: var(--fg-muted);
+    margin-bottom: 12px;
+  }
+  .role-body .company .sep { color: var(--fg-dim); margin: 0 6px; }
+  .role-body ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+  }
+  .role-body ul li {
+    font-size: 14.5px;
+    color: var(--fg-muted);
+    line-height: 1.55;
+    padding-left: 18px;
+    position: relative;
+  }
+  .role-body ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .role-body ul li b {
+    color: var(--fg);
+    font-weight: 500;
+  }
+  @media (max-width: 640px) {
+    .role { grid-template-columns: 1fr; gap: 10px; }
+    .role-dates { padding-top: 0; }
+  }
+
+  /* ---------- capabilities ---------- */
+  .caps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+  .caps h3 {
+    font-family: var(--font-body);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    color: var(--fg-dim);
+    margin: 0 0 14px;
+  }
+  .caps ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+  }
+  .caps li {
+    font-size: 14.5px;
+    color: var(--fg);
+    line-height: 1.5;
+  }
+  .caps li small {
+    display: block;
+    color: var(--fg-muted);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+  .cap-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .tag {
+    font-size: 12px;
+    color: var(--fg-muted);
+    padding: 3px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--surface);
+  }
+  @media (max-width: 640px) {
+    .caps { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  /* ---------- markets ---------- */
+  .markets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 8px;
+  }
+  .market {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--fg);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .market::before {
+    content: "→";
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  /* ---------- contact ---------- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    margin-top: 8px;
+  }
+  .contact-item {
+    display: grid;
+    gap: 4px;
+  }
+  .contact-item .label {
+    font-size: 11.5px;
+    color: var(--fg-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+  }
+  .contact-item a, .contact-item .value {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 24;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--fg);
+    transition: color var(--transition);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    width: fit-content;
+  }
+  .contact-item a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  @media (max-width: 540px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- footer ---------- */
+  footer {
+    padding-block: 40px 32px;
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--fg-dim);
+  }
+  footer .credit a {
+    color: var(--fg-muted);
+    border-bottom: 1px solid var(--hairline);
+    transition: color var(--transition), border-color var(--transition);
+  }
+  footer .credit a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal { opacity: 1; transform: none; transition: opacity 600ms cubic-bezier(.2,.7,.2,1), transform 600ms cubic-bezier(.2,.7,.2,1); }
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal.pending { opacity: 0; transform: translateY(14px); }
+  }
+
+  /* focus */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" aria-label="Principal">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="David Goff — Inicio">
+      <span class="monogram" aria-hidden="true">DG</span>
+      <span>David Goff</span>
+    </a>
+    <div class="nav-links">
+      <a href="#metricas" class="link-hide">Métricas</a>
+      <a href="#perfil" class="link-hide">Perfil</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#contacto">Contacto</a>
+      <button class="theme-toggle" type="button" aria-label="Cambiar tema">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="top" class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <span class="eyebrow role-label"><span class="dot"></span>Operaciones · Supply Chain · Agroindustria</span>
+    <h1>Director de Operaciones que <em>protege el margen</em> y digitaliza la cadena.</h1>
+    <p class="lede">Ejecutivo senior con más de 23 años dirigiendo operaciones logísticas, distribución y exportaciones en agroindustria centroamericana. Cierro brechas entre planta, CEDIS y mercado — con presupuesto, equipo y método.</p>
+    <div class="cta-row">
+      <a href="cv_david-goff.pdf" class="btn btn-primary" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Descargar CV (PDF)
+      </a>
+      <a href="mailto:davidgoff.1979@gmail.com" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Conversemos
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ MÉTRICAS ============ -->
+  <section id="metricas" aria-label="Métricas destacadas">
+    <span class="eyebrow"><span class="dot"></span>Tres cifras que resumen la carrera</span>
+    <h2>Resultados que un headhunter puede citar en frío.</h2>
+
+    <div class="metrics" style="margin-top: 52px;">
+
+      <article class="metric reveal">
+        <div>
+          <span class="metric-number"><span class="prefix">USD</span>195K<span class="plus">+</span></span>
+          <span class="metric-caption">Ahorros anuales · acreditados</span>
+        </div>
+        <div class="metric-body">
+          <h3>Rediseño logístico, no recorte de servicios</h3>
+          <p>USD 110K por eliminación de bodegas alternas en Tegucigalpa (sostenido 2 años) y USD 85K por estandarización de carga en la flota — sin inversión asociada, solo rediseño de flujo logístico.</p>
+        </div>
+      </article>
+
+      <article class="metric reveal">
+        <div>
+          <span class="metric-number">34,000<span class="suffix">TM · año</span></span>
+          <span class="metric-caption">Melaza exportada · Chumbagua</span>
+        </div>
+        <div class="metric-body">
+          <h3>Más 900 contenedores de azúcar morena al año</h3>
+          <p>Volúmenes gestionados en Chumbagua, en paralelo con 25,000 TM y 600 contenedores anuales en Choluteca. 100% de cumplimiento hacia cuatro mercados en tres continentes.</p>
+          <div class="markets">
+            <span class="market">Estados Unidos</span>
+            <span class="market">Reino Unido</span>
+            <span class="market">Caribe</span>
+            <span class="market">Corea del Sur</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="metric reveal">
+        <div>
+          <span class="metric-number">23<span class="suffix">Años</span></span>
+          <span class="metric-caption">Dirigiendo operaciones · agroindustria</span>
+        </div>
+        <div class="metric-body">
+          <h3>Trayectoria continua, sin lagunas</h3>
+          <p>Tres empresas de referencia — Dole Fresh Fruit, Compañía Azucarera Chumbagua y Azucarera Choluteca — con progresión ascendente de mando medio a dirección, más consultoría reciente en Grupo Pellas (Nicaragua).</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PERFIL ============ -->
+  <section id="perfil" class="profile">
+    <span class="eyebrow"><span class="dot"></span>Perfil ejecutivo</span>
+    <h2>Cómo trabajo, en tres párrafos.</h2>
+    <p><b>Protejo el margen antes de reducir costos.</b> Mis ahorros no vienen de recortar servicios ni presionar tarifas: vienen de rediseñar el flujo — redistribuir cargas entre CEDIS, aprovechar transporte compartido con pares del sector, migrar contratos a moneda nacional para eliminar exposición cambiaria. La cifra final es la consecuencia, no el objetivo.</p>
+    <p><b>Digitalizo lo que se puede medir.</b> Lideré con IT la aplicación WEB de control de inventarios en Choluteca (100% trazabilidad, 95% menos errores) y desplegué monitoreo GPS 24/7 con CCTV 360 en Chumbagua — en 10 años, una sola pérdida de camión en carretera frente a cuatro de la administración anterior.</p>
+    <p><b>Conecto operaciones con negocio.</b> Diez años como Gerente Comercial en Dole me enseñaron que la cadena de suministro solo importa si sostiene una venta. Ese cruce comercial-operativo es lo que hoy diferencia mi criterio directivo del de un jefe de logística puro.</p>
+  </section>
+
+  <!-- ============ LOGROS CLAVE ============ -->
+  <section id="logros" aria-label="Logros clave">
+    <span class="eyebrow"><span class="dot"></span>Casos de valor</span>
+    <h2>Tres decisiones que estaría dispuesto a contar en detalle.</h2>
+
+    <div class="achievements" style="margin-top: 44px;">
+
+      <article class="achievement reveal">
+        <div class="achievement-number">01</div>
+        <div>
+          <h3>Rediseño logístico Choluteca → CEDIS SPS</h3>
+          <p>Antes de zafra 2023, redirigí las rutas con destino a Tegucigalpa hacia los CEDIS de San Pedro Sula y aproveché el esquema de transporte compartido con Central de Ingenios, absorbiendo el volumen con la infraestructura existente. Se eliminó completamente el arrendamiento de bodegas alternas sin comprometer la continuidad de despachos.</p>
+          <span class="impact"><span class="k">USD 110,000</span> · anuales · sostenido 2 años</span>
+        </div>
+      </article>
+
+      <article class="achievement reveal">
+        <div class="achievement-number">02</div>
+        <div>
+          <h3>Consultoría portuaria Ingenio San Antonio · Grupo Pellas</h3>
+          <p>En consultoría 2025 al mayor grupo agroindustrial de Nicaragua, diagnostiqué costos por sobreestadías de hasta USD 260 mil anuales en la operación portuaria de exportación de azúcar, y estructuré propuestas de reducción vía diversificación portuaria, optimización de rutas (incluyendo una alternativa que ahorra 20 km por operación) y mejoras operativas.</p>
+          <span class="impact"><span class="k">USD 260,000</span> · exposición identificada</span>
+        </div>
+      </article>
+
+      <article class="achievement reveal">
+        <div class="achievement-number">03</div>
+        <div>
+          <h3>Riesgo cambiario &amp; arrendamientos en Chumbagua</h3>
+          <p>Ante la volatilidad lempira/dólar en el ciclo 2019–2020, implementé el pago de arrendamientos de tierras a los más de 50 arrendadores del portafolio agrícola en moneda nacional, eliminando la exposición cambiaria del componente más grande del costo operativo agrícola y aislando el negocio de eventos macro.</p>
+          <span class="impact"><span class="k">+50 arrendadores</span> · exposición FX eliminada</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ TRAYECTORIA ============ -->
+  <section id="trayectoria" aria-label="Trayectoria profesional">
+    <span class="eyebrow"><span class="dot"></span>Trayectoria</span>
+    <h2>Seis roles, tres empresas, un mismo hilo.</h2>
+
+    <div class="timeline" style="margin-top: 44px;">
+
+      <div class="role reveal">
+        <div class="role-dates">
+          2025<br>Abr – Sep
+        </div>
+        <div class="role-body">
+          <h3>Consultor · Operaciones Logísticas &amp; Exportaciones</h3>
+          <div class="company">Ingenio San Antonio — Grupo Pellas <span class="sep">·</span> Nicaragua</div>
+          <ul>
+            <li>Diagnóstico portuario y rutas de exportación de azúcar con <b>USD 260K</b> de exposición identificada.</li>
+            <li>Propuesta de reducción de <b>20 km</b> por operación vía ruta interna alternativa y uso de puertos alternos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-dates">
+          2023 – 2025<br>Jun – Mar
+        </div>
+        <div class="role-body">
+          <h3>Gerente de Logística | Exportaciones</h3>
+          <div class="company">Azucarera Choluteca S.A. <span class="sep">·</span> Honduras <span class="sep">·</span> 106 colaboradores</div>
+          <ul>
+            <li>Rediseño logístico con ahorros de <b>USD 110K</b> anuales sostenidos 2 años, más <b>USD 85K</b> por estandarización de carga.</li>
+            <li>Digitalización WEB de inventarios: <b>100% trazabilidad</b>, <b>95% menos errores</b> de registro.</li>
+            <li>Ampliación de capacidad de melaza en <b>3,500 TM</b> vía geomembrana térmica.</li>
+            <li>100% de cumplimiento de <b>25,000 TM</b> + <b>600 contenedores</b> anuales a mercados internacionales.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-dates">
+          2015 – 2022<br>Ene – Abr
+        </div>
+        <div class="role-body">
+          <h3>Gerente Administrativo | Operaciones</h3>
+          <div class="company">Compañía Azucarera Chumbagua S.A. <span class="sep">·</span> Honduras <span class="sep">·</span> Presupuesto L.100 M</div>
+          <ul>
+            <li>100% de cumplimiento de <b>34,000 TM</b> + <b>900 contenedores</b> anuales a EE.UU., UK, Caribe y Corea del Sur.</li>
+            <li>Migración de arrendamientos (<b>+50 arrendadores</b>) a moneda nacional — exposición cambiaria eliminada.</li>
+            <li>GPS 24/7 + CCTV 360: <b>1 pérdida en 10 años</b> vs 4 de la administración anterior.</li>
+            <li>Gestión de <b>+500 procesos legales</b> vinculados a la operación agrícola y logística.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-dates">
+          2012 – 2014<br>Oct – Dic
+        </div>
+        <div class="role-body">
+          <h3>Jefe de Logística &amp; Distribución de Producto Terminado</h3>
+          <div class="company">Compañía Azucarera Chumbagua S.A. <span class="sep">·</span> Honduras</div>
+          <ul>
+            <li>100% de cumplimiento en auditorías internas y externas de inventarios en almacenes propios y arrendados.</li>
+            <li>Base de proveedores de transporte de <b>2 a 5</b>; riesgo de incumplimiento de <b>50% a 20%</b>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-dates">
+          2007 – 2012<br>Ene – Oct
+        </div>
+        <div class="role-body">
+          <h3>Gerente Comercial</h3>
+          <div class="company">Dole Fresh Fruit International LTD <span class="sep">·</span> Honduras <span class="sep">·</span> USD 4.5 M en ventas</div>
+          <ul>
+            <li>Crecimiento del <b>20% anual</b> del portafolio agroindustrial vía ampliación en cuentas con potencial.</li>
+            <li>92% del presupuesto anual de ventas cumplido; coordinación integral con Producción y Logística.</li>
+            <li>Reducción del <b>12% anual</b> en inventarios de baja rotación — capital de trabajo liberado.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-dates">
+          2002 – 2006<br>Nov – Dic
+        </div>
+        <div class="role-body">
+          <h3>Jefe de Atención al Cliente &amp; Post Venta</h3>
+          <div class="company">Dole Fresh Fruit International LTD <span class="sep">·</span> Honduras</div>
+          <ul>
+            <li>Migración de seguimiento reactivo a flujo coordinado end-to-end con Ventas, Producción y Logística.</li>
+            <li>Satisfacción del cliente: <b>85% → 92%</b>. Tiempo de entrega: <b>10 → 6 días</b>.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CAPACIDADES ============ -->
+  <section aria-label="Formación y capacidades">
+    <span class="eyebrow"><span class="dot"></span>Formación &amp; capacidades</span>
+    <h2>Formación ejecutiva anclada en 23 años de campo.</h2>
+
+    <div class="caps" style="margin-top: 40px;">
+
+      <div>
+        <h3>Formación</h3>
+        <ul>
+          <li>Programa de Gestión de Operaciones, Procesos y Estrategias<small>INCAE Business School · 2023</small></li>
+          <li>Maestría en Gestión de Operaciones<small>ADEN International Business School · 2017–2019</small></li>
+          <li>Maestría en Administración de Empresas (MBA)<small>UNICAH · 2007–2009</small></li>
+          <li>Licenciatura en Gerencia de Negocios<small>UTH · 1998–2002</small></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Sistemas &amp; tecnología</h3>
+        <div class="cap-tags">
+          <span class="tag">SAP Business One</span>
+          <span class="tag">JD Edwards</span>
+          <span class="tag">AS/400</span>
+          <span class="tag">ERP</span>
+          <span class="tag">GPS de flota</span>
+          <span class="tag">CCTV 360</span>
+          <span class="tag">SharePoint</span>
+        </div>
+        <h3 style="margin-top: 32px;">Calidad &amp; mejora continua</h3>
+        <div class="cap-tags">
+          <span class="tag">Lean Six Sigma</span>
+          <span class="tag">5S</span>
+          <span class="tag">ISO 9001</span>
+          <span class="tag">ISO 22000</span>
+          <span class="tag">HACCP</span>
+          <span class="tag">BPA / BPM</span>
+        </div>
+      </div>
+
+      <div>
+        <h3>Dirección &amp; escala</h3>
+        <ul>
+          <li>Presupuestos operativos hasta <b>L.100 M</b></li>
+          <li>Equipos de <b>100+ colaboradores</b> directos e indirectos</li>
+          <li>Flotas tercerizadas de <b>120 unidades</b></li>
+          <li>Exportaciones a EE.UU., UK, Caribe, Corea del Sur</li>
+          <li>Multi-CEDIS y multi-almacén</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Idiomas</h3>
+        <ul>
+          <li>Español<small>Nativo</small></li>
+          <li>Inglés<small>B1 · en formación continua</small></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto" aria-label="Contacto">
+    <span class="eyebrow"><span class="dot"></span>Conversemos</span>
+    <h2>Abierto a Dirección de Operaciones, Supply Chain o Gerencia General — Honduras, Centroamérica o remoto regional.</h2>
+    <p style="color: var(--fg-muted); max-width: 62ch; margin: 8px 0 32px;">También considero proyectos de consultoría en operaciones, logística y Supply Chain, especialmente donde pueda aportar experiencia práctica en transformación y optimización de procesos.</p>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="label">Correo</span>
+        <a href="mailto:davidgoff.1979@gmail.com">davidgoff.1979@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="label">Móvil</span>
+        <a href="tel:+50433341718">+504 3334 1718</a>
+      </div>
+      <div class="contact-item">
+        <span class="label">Ubicación</span>
+        <span class="value">San Pedro Sula, Honduras</span>
+      </div>
+      <div class="contact-item">
+        <span class="label">LinkedIn</span>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">David E. Goff S.</a>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <a href="cv_david-goff.pdf" class="btn btn-primary" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Descargar CV completo (PDF)
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div>© <span id="year">2026</span> David Edgardo Goff Sevilla</div>
+    <div class="credit">Optimización de perfil · <a href="#" target="_blank" rel="noopener">Murillo Consulting</a></div>
+  </footer>
+
+</div>
+
+<script>
+  // ---- theme toggle (persist per viewer, safe under private mode / blocked storage) ----
+  (function () {
+    const KEY = "dg-theme";
+    const root = document.documentElement;
+    let stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+    if (stored === "dark" || stored === "light") root.setAttribute("data-theme", stored);
+
+    const btn = document.querySelector(".theme-toggle");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        const isDark = root.getAttribute("data-theme") === "dark"
+          || (!root.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        const next = isDark ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem(KEY, next); } catch (e) {}
+      });
+    }
+  })();
+
+  // ---- year ----
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ---- reveal on scroll (respect reduced motion) ----
+  (function () {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const targets = document.querySelectorAll(".reveal");
+    if (prefersReduced || !("IntersectionObserver" in window)) return;
+    targets.forEach(t => t.classList.add("pending"));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.remove("pending");
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    targets.forEach(t => io.observe(t));
+  })();
+</script>
+
+</body>
+</html>
